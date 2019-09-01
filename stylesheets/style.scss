@@ -25,11 +25,18 @@ $display-5: 12px * $innerWidth/$realWidth;
 @mixin getHeight($height) {
 	height: $innerHeight * $height/$realHeight;
 }
+@mixin page {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	@content;
+}
 body {
 	padding: 0;
 	margin: 0;
 	width: 100%;
 	height: $innerHeight;
+	font-family: $navRightline;
 }
 * {
 	box-sizing: border-box;
@@ -78,13 +85,20 @@ body {
 		transform: translateX(-50%);
 		z-index: 3;
 		top: 67px * $innerHeight/$realHeight;
+		@include getHeight(124px);
+		@include getWidth(154px);
+		img {
+			display: block;
+			height: auto;
+			max-width: 100%;
+		}
 	}
 	.verticle-line {
 		position: absolute;
 		left: 62px * $innerWidth/$realWidth;
 		@include getWidth(1px);
 		@include getHeight(157px);
-		top: 300.675px;
+		top: 317.675px;
 		background: $blackText;
 		z-index: 3;
 	}
@@ -92,7 +106,7 @@ body {
 		position: absolute;
 		color: $blackText;
 		left: 35.821875px;
-		bottom: 266px * $innerHeight/$realHeight;
+		bottom: 210px * $innerHeight/$realHeight;
 		z-index: 3;
 		text-align: right;
 		writing-mode: vertical-rl;
@@ -104,7 +118,7 @@ body {
 		position: absolute;
 		color: $blackText;
 		left: 35.821875px;
-		bottom: 206.5px;
+		bottom: 180.5px;
 		z-index: 3;
 		text-align: right;
 		writing-mode: vertical-rl;
@@ -124,8 +138,8 @@ body {
 		padding: 0;
 		justify-content: center;
 		align-items: center;
-        bottom:67px*$innerHeight/$realHeight;
-        left:88px*$innerWidth/$realWidth;
+		bottom: 67px * $innerHeight/$realHeight;
+		left: 88px * $innerWidth/$realWidth;
 		li {
 			padding-right: 17px * $innerWidth/$realWidth;
 			.horizontal-line {
@@ -133,34 +147,32 @@ body {
 				@include getWidth(271px);
 				background: $blackText;
 			}
-			p{
+			p {
 				margin: 0;
 			}
 		}
 	}
-	p.collection-name{
+	p.collection-name {
 		position: absolute;
 		z-index: 3;
-		bottom: 64px*$innerHeight/$realHeight;
-		left:720px*$innerWidth/$realWidth;
+		bottom: 64px * $innerHeight/$realHeight;
+		left: 720px * $innerWidth/$realWidth;
 		margin: 0;
 	}
 	a.see-all {
-		text-decoration: none;
 		color: $p1NavText;
 		position: absolute;
 		z-index: 3;
-		left:50%;
+		left: 50%;
 		transform: translateX(-50%);
-		bottom:67px*$innerHeight/$realHeight;
+		bottom: 67px * $innerHeight/$realHeight;
 	}
 	.page-1 {
-		display: flex;
-		height: 100%;
-		width: 100%;
-		background-image: url('../images/coll-1/page-1/gumi-test-01.png');
-		background-color: $grayBg;
-		position: relative;
+		@include page {
+			display: flex;
+			background-image: url('../images/coll-1/page-1/gumi-test-01.png');
+			background-color: $grayBg;
+		}
 		.describe-line {
 			background: $blackText;
 			@include getWidth(296px);
@@ -229,6 +241,101 @@ body {
 							font-size: $display-2;
 						}
 					}
+				}
+			}
+		}
+	}
+	#page-4 {
+		@include page {
+			display: flex;
+			background-color: $whiteBg;
+			flex-direction: column;
+		}
+		.avt {
+			background-image: url('../images/coll-1/page-1/gumi-test-01_2.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			z-index: 1;
+			position: absolute;
+			top: 270px * $innerHeight/$realHeight;
+			left: 50%;
+			transform: translateX(-50%);
+			@include getHeight(595px);
+			@include getWidth(383px);
+		}
+		.bg-gray {
+			display: flex;
+			align-items: center;
+			position: relative;
+			width: 100%;
+			@include getHeight(811px);
+			background: $grayBg;
+			background-image: url('../images/coll-1/page-1/gumi-test-01_1.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+			ul.time {
+				list-style: none;
+				display: flex;
+				align-items: center;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				bottom: 145px * $innerHeight/$realHeight;
+				left: 400px * $innerWidth/$realWidth;
+				li:nth-child(1) {
+					padding-right: 750px * $innerWidth/$realWidth;
+				}
+				li {
+					font-family: $rightLine;
+					font-size: $display-3;
+				}
+			}
+
+			.pagiantion {
+				position: absolute;
+				right: $innerWidth * 65px / $realWidth;
+				ul {
+					list-style: none;
+					text-align: center;
+					li {
+						padding: $innerHeight * 37px / $realHeight 0;
+						div {
+							@include getWidth(2px);
+							@include getHeight(129px);
+							background-color: $blackText;
+							margin: 0 auto;
+						}
+						a {
+							text-decoration: none;
+							color: $blackText;
+						}
+					}
+					li.active-page {
+						a {
+							font-size: $display-2;
+						}
+					}
+				}
+			}
+		}
+		.bg-white {
+			@include getHeight(269px);
+			width: 100%;
+			p.collection {
+				position: absolute;
+				bottom: 67px * $innerHeight/$realHeight;
+				right: 99px * $innerWidth/$realWidth;
+				margin: 0;
+				font-size: $display-2;
+				font-family: $rightLine;
+				&:after {
+					content: '';
+					position: absolute;
+					@include getHeight(3px);
+					background: $blackText;
+					@include getWidth(93px);
+					top: 19px;
 				}
 			}
 		}

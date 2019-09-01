@@ -1,0 +1,211 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 657px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#coll-1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#coll-1 a.next {
+  color: #9b9392;
+  top: 32.85px;
+  right: 96.046875px;
+  z-index: 3;
+  position: absolute;
+}
+#coll-1 a.next:after {
+  content: "";
+  width: 51.225px;
+  height: 1.2166666667px;
+  right: -55.154167px;
+  top: 10px;
+  background: #9b9392;
+  display: block;
+  position: absolute;
+}
+#coll-1 a.previous {
+  color: #9b9392;
+  top: 32.85px;
+  left: 98.8927083333px;
+  z-index: 3;
+  position: absolute;
+}
+#coll-1 a.previous:before {
+  content: "";
+  width: 51.225px;
+  height: 1.2166666667px;
+  background: #9b9392;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: -55.154167px;
+}
+#coll-1 .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  top: 40.7583333333px;
+}
+#coll-1 .verticle-line {
+  position: absolute;
+  left: 44.1104166667px;
+  width: 0.7114583333px;
+  height: 95.5083333333px;
+  top: 300.675px;
+  background: #000000;
+  z-index: 3;
+}
+#coll-1 a.twitter {
+  position: absolute;
+  color: #000000;
+  left: 35.821875px;
+  bottom: 161.8166666667px;
+  z-index: 3;
+  text-align: right;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 8.5375px;
+  font-family: "Times New Roman";
+}
+#coll-1 a.instagram {
+  position: absolute;
+  color: #000000;
+  left: 35.821875px;
+  bottom: 206.5px;
+  z-index: 3;
+  text-align: right;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 8.5375px;
+  font-family: "Times New Roman";
+}
+#coll-1 ul.about {
+  display: flex;
+  margin: 0;
+  z-index: 3;
+  position: absolute;
+  list-style: none;
+  color: #000000;
+  font-size: 8.5375px;
+  font-family: "Times New Roman";
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  bottom: 40.7583333333px;
+  left: 62.6083333333px;
+}
+#coll-1 ul.about li {
+  padding-right: 12.0947916667px;
+}
+#coll-1 ul.about li .horizontal-line {
+  height: 0.6083333333px;
+  width: 192.8052083333px;
+  background: #000000;
+}
+#coll-1 ul.about li p {
+  margin: 0;
+}
+#coll-1 p.collection-name {
+  position: absolute;
+  z-index: 3;
+  bottom: 38.9333333333px;
+  left: 512.25px;
+  margin: 0;
+}
+#coll-1 a.see-all {
+  text-decoration: none;
+  color: #9b9392;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40.7583333333px;
+}
+#coll-1 .page-1 {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/coll-1/page-1/gumi-test-01.png");
+  background-color: #ede0df;
+  position: relative;
+}
+#coll-1 .page-1 .describe-line {
+  background: #000000;
+  width: 210.5916666667px;
+  height: 0.6083333333px;
+  position: absolute;
+  top: 370.475px;
+  left: 511.5385416667px;
+  z-index: 3;
+}
+#coll-1 .page-1 .bg-white {
+  width: 50%;
+  height: 100%;
+  background: #ffffff;
+  position: relative;
+}
+#coll-1 .page-1 .bg-white p.title {
+  font-size: 96.7583333333px;
+  padding-left: 91.778125px;
+  padding-top: 159.3833333333px;
+  margin: 0;
+}
+#coll-1 .page-1 .bg-white .describe {
+  width: 125.928125px;
+  position: absolute;
+  right: 46.95625px;
+  bottom: 71.175px;
+}
+#coll-1 .page-1 .bg-white .describe p.describe-text {
+  font-size: 9.9604166667px;
+}
+#coll-1 .page-1 .bg-gray {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+#coll-1 .page-1 .bg-gray .avt {
+  background-image: url("../images/coll-1/page-1/gumi-test-01_06.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 575.4833333333px;
+  width: 376.3614583333px;
+  margin-left: 127.3510416667px;
+}
+#coll-1 .page-1 .bg-gray .pagiantion {
+  position: absolute;
+  right: 46.2447916667px;
+}
+#coll-1 .page-1 .bg-gray .pagiantion ul {
+  list-style: none;
+  text-align: center;
+}
+#coll-1 .page-1 .bg-gray .pagiantion ul li {
+  padding: 22.5083333333px 0;
+}
+#coll-1 .page-1 .bg-gray .pagiantion ul li div {
+  width: 1.4229166667px;
+  height: 78.475px;
+  background-color: #000000;
+  margin: 0 auto;
+}
+#coll-1 .page-1 .bg-gray .pagiantion ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+#coll-1 .page-1 .bg-gray .pagiantion ul li.active-page a {
+  font-size: 34.15px;
+}
+
+/*# sourceMappingURL=style.css.map */

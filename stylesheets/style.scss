@@ -1,0 +1,236 @@
+$innerWidth: 1366px;
+$innerHeight: 657px;
+$realWidth: 1920px;
+$realHeight: 1080px;
+// color
+$grayBg: #ede0df;
+$blackText: #000000;
+$whiteBg: #ffffff;
+$whiteRectangle: #fefcfc;
+$p1NavText: #9b9392;
+
+// font-family
+$rightLine: Arial;
+$navRightline: 'Times New Roman';
+//font-size
+$display-1: 136px * $innerWidth/$realWidth;
+$display-2: 48px * $innerWidth/$realWidth;
+$display-3: 24px * $innerWidth/$realWidth;
+$display-4: 14px * $innerWidth/$realWidth;
+$display-5: 12px * $innerWidth/$realWidth;
+
+@mixin getWidth($width) {
+	width: $innerWidth * $width/$realWidth;
+}
+@mixin getHeight($height) {
+	height: $innerHeight * $height/$realHeight;
+}
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: $innerHeight;
+}
+* {
+	box-sizing: border-box;
+}
+#coll-1 {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	a.next {
+		color: $p1NavText;
+		top: 54px * $innerHeight/$realHeight;
+		right: 135px * $innerWidth/$realWidth;
+		z-index: 3;
+		position: absolute;
+		&:after {
+			content: '';
+			@include getWidth(72px);
+			@include getHeight(2px);
+			right: -55.154167px;
+			top: 10px;
+			background: $p1NavText;
+			display: block;
+			position: absolute;
+		}
+	}
+	a.previous {
+		color: $p1NavText;
+		top: 54px * $innerHeight/$realHeight;
+		left: 139px * $innerWidth/$realWidth;
+		z-index: 3;
+		position: absolute;
+		&:before {
+			content: '';
+			@include getWidth(72px);
+			@include getHeight(2px);
+			background: $p1NavText;
+			display: block;
+			position: absolute;
+			top: 10px;
+			left: -55.154167px;
+		}
+	}
+	.logo {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 3;
+		top: 67px * $innerHeight/$realHeight;
+	}
+	.verticle-line {
+		position: absolute;
+		left: 62px * $innerWidth/$realWidth;
+		@include getWidth(1px);
+		@include getHeight(157px);
+		top: 300.675px;
+		background: $blackText;
+		z-index: 3;
+	}
+	a.twitter {
+		position: absolute;
+		color: $blackText;
+		left: 35.821875px;
+		bottom: 266px * $innerHeight/$realHeight;
+		z-index: 3;
+		text-align: right;
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
+		font-size: $display-5;
+		font-family: $navRightline;
+	}
+	a.instagram {
+		position: absolute;
+		color: $blackText;
+		left: 35.821875px;
+		bottom: 206.5px;
+		z-index: 3;
+		text-align: right;
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
+		font-size: $display-5;
+		font-family: $navRightline;
+	}
+	ul.about {
+		display: flex;
+		margin: 0;
+		z-index: 3;
+		position: absolute;
+		list-style: none;
+		color: $blackText;
+		font-size: $display-5;
+		font-family: $navRightline;
+		padding: 0;
+		justify-content: center;
+		align-items: center;
+        bottom:67px*$innerHeight/$realHeight;
+        left:88px*$innerWidth/$realWidth;
+		li {
+			padding-right: 17px * $innerWidth/$realWidth;
+			.horizontal-line {
+				@include getHeight(1px);
+				@include getWidth(271px);
+				background: $blackText;
+			}
+			p{
+				margin: 0;
+			}
+		}
+	}
+	p.collection-name{
+		position: absolute;
+		z-index: 3;
+		bottom: 64px*$innerHeight/$realHeight;
+		left:720px*$innerWidth/$realWidth;
+		margin: 0;
+	}
+	a.see-all {
+		text-decoration: none;
+		color: $p1NavText;
+		position: absolute;
+		z-index: 3;
+		left:50%;
+		transform: translateX(-50%);
+		bottom:67px*$innerHeight/$realHeight;
+	}
+	.page-1 {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		background-image: url('../images/coll-1/page-1/gumi-test-01.png');
+		background-color: $grayBg;
+		position: relative;
+		.describe-line {
+			background: $blackText;
+			@include getWidth(296px);
+			@include getHeight(1px);
+			position: absolute;
+			top: 609px * $innerHeight/$realHeight;
+			left: 719px * $innerWidth/$realWidth;
+			z-index: 3;
+		}
+		.bg-white {
+			width: 50%;
+			height: 100%;
+			background: $whiteBg;
+			position: relative;
+			p.title {
+				font-size: $display-1;
+				padding-left: 129px * $innerWidth/$realWidth;
+				padding-top: 262px * $innerHeight/$realHeight;
+				margin: 0;
+			}
+			.describe {
+				width: 177px * $innerWidth/$realWidth;
+				position: absolute;
+				right: 66px * $innerWidth/$realWidth;
+				bottom: 117px * $innerHeight/$realHeight;
+				p.describe-text {
+					font-size: $display-4;
+				}
+			}
+		}
+		.bg-gray {
+			display: flex;
+			align-items: center;
+			position: relative;
+			width: 50%;
+			height: 100%;
+			.avt {
+				background-image: url('../images/coll-1/page-1/gumi-test-01_06.png');
+				background-repeat: no-repeat;
+				background-size: contain;
+				@include getHeight(946px);
+				@include getWidth(529px);
+				margin-left: $innerWidth * 179px / $realWidth;
+			}
+			.pagiantion {
+				position: absolute;
+				right: $innerWidth * 65px / $realWidth;
+				ul {
+					list-style: none;
+					text-align: center;
+					li {
+						padding: $innerHeight * 37px / $realHeight 0;
+						div {
+							@include getWidth(2px);
+							@include getHeight(129px);
+							background-color: $blackText;
+							margin: 0 auto;
+						}
+						a {
+							text-decoration: none;
+							color: $blackText;
+						}
+					}
+					li.active-page {
+						a {
+							font-size: $display-2;
+						}
+					}
+				}
+			}
+		}
+	}
+}
